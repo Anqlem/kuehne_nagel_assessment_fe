@@ -12,4 +12,4 @@ const tableSlice = createSlice({
     initialState
 })
 
-export const tableReducer = tableSlice.reducer;
+export const table = tableSlice.reducer;
