@@ -1,10 +1,10 @@
-import { configureStore } from '@reduxjs/toolkit'
-import { table } from './slices/table';
+import { configureStore } from "@reduxjs/toolkit";
+import { tableReducer } from "./slices/tableSlice";
 
 const store = configureStore({
-    reducer:{
-        tablePage: table
-    }
-})
+  reducer: {
+    tablePage: tableReducer,
+  },
+});
 
 export default store;

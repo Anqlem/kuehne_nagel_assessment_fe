@@ -1,21 +1,19 @@
-import Table from "./components/Table/Table"
+import Table from "./components/Table/Table";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Details from "./components/Details/DetailsPage";
+import tbl from "../src/components/Table/Table.module.css";
 
-function App(props) {
-  console.log(props)
+function App() {
   return (
-    <div className="App">
-      <Table />
-    </div>
+    <BrowserRouter>
+      <div className={tbl.app}>
+        <Routes>
+          <Route path="" element={<Table />} />
+          <Route path="/details/:id" element={<Details />} />
+        </Routes>
+      </div>
+    </BrowserRouter>
   );
 }
 
 export default App;
-
-
-// TODO:
-// Delete button logic
-// Details button + logic + update
-
-// Maybe:
-// - Use Axios
-
